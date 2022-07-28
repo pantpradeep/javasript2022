@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Event</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex wrap">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Example of Keyboard Event</h2>
+                    <label>A function is triggred when the user is pressing a key in the input field</label>
+                    <input type="text" class="form-control"  onkeydown="keyDown()" onkeyup="keyUp()" placeholder="write">
+                   <div id="result"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            // function keyPress() {
+            //     document.getElementById("result").innerHTML= `you pressed ${event.key} and its code is ${event.code}`
+            // }
+
+            function keyDown() {
+                document.getElementById("result").innerHTML= `key is down`
+            }
+
+            function keyUp() {
+                document.getElementById("result").innerHTML= `key is up`
+            }
+        </script>
+    </body>
+</html>
+

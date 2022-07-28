@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Event</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex wrap">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Example of input Events</h2>
+                    <label>Your Name</label>
+                    <input type="text"  class="form-control" name="" id="ice">
+                    <br>
+                    <label>Choosw an ice cream flavor</label>
+                    <select id="iceCreams" class="form-control" >
+                        <option value="">Select One</option>
+                        <option value="choco">Chocolate</option>
+                        <option value="PineApple">PineApple</option>
+                        <option value="Vanilla">Toffee</option>
+                    </select>
+                   <div id="result"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            const selectItem = () => {
+                const inputChange = document.getElementById("ice").value;
+                const iceCreams = document.getElementById("iceCreams").value;
+                console.log(`${inputChange} and ${iceCreams}`)
+                const result = document.getElementById('result');
+                result.innerHTML = `mr. ${iceCreams} select ${iceCreams}` 
+            }
+
+            const iceCreams = document.getElementById("iceCreams");
+
+            iceCreams.addEventListener('change', () => {
+                const inputChange = document.getElementById("ice").value;
+                const iceCreams = document.getElementById("iceCreams").value;
+                const result = document.getElementById('result');
+                result.innerHTML = `mr. ${iceCreams} select ${iceCreams}` 
+            })
+            
+            // function selectItem() {
+            //     document.getElementById("result").innerHTML= `key is down`
+            // }
+        </script>
+    </body>
+</html>
+
