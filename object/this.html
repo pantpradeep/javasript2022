@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Event</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex wrap">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Example of objects</h2>
+                 
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            console.log(this); // current content is window.
+
+            function myFunc(){
+                console.log(this);
+            }
+            myFunc(); // still context is window;
+
+            let myvar = "raju";
+            function myFunc1(){
+                console.log(this);
+            }
+            myFunc1(); // as current context is window and myvar is also global variable so we can access that variable by this
+
+
+            let myData = {
+                // object inside object
+                myName: 'pradeep',
+                myAge: 20,
+                getInfo () {
+                    console.log(this.myName); // current context is obj now
+                }
+            }
+            myData.getInfo();
+
+            // this will not in arrow function
+            let obj = {
+                // object inside object
+                myName: 'pradeep',
+                myAge: 20,
+                getInfo1: () => {
+                    console.log(this.myName); // current context is obj now
+                }
+            }
+
+            obj.getInfo1(); // again getting current context is window
+
+            
+  
+        </script>
+    </body>
+</html>
+

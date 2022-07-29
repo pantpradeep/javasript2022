@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Event</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex wrap">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Example of objects</h2>
+                 
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            // first way
+            // let myData = {
+            //     myName: 'pradeep',
+            //     myAge: 20,
+            //     getInfo : function () {
+            //         console.log(`My name is ${myData.myName} and my age is ${myData.myAge}`)
+            //     }
+            // }
+
+            // myData.getInfo();
+
+            //2nd way 
+            let myData = {
+                // object inside object
+                myName: {
+                    myRealName : 'pradeep',
+                    myAddress:'612'
+                },
+                myAge: 20,
+                getInfo () {
+                    console.log(`My name is ${myData.myName.myRealName}, address: ${myData.myName.myAddress} and my age is ${myData.myAge}`)
+                }
+            }
+
+            myData.getInfo();
+  
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setTimeout Event</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="../css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <button onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex wrap">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Example of setTimeOut Events</h2>
+                    <label>want to know my Name?</label>
+                    <br>
+                    <button id="btn" class="btn btn-primary">Click here</button>
+                   <div id="result"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            
+
+            const showMyName = document.getElementById("result");
+            const btn = document.getElementById("btn");
+            btn.addEventListener('click', () => {
+                showMyName.innerHTML = 'loading...'
+                setTimeout(() => {
+                    showMyName.innerHTML= "Pradeep Pant"
+                }, 1000)
+            })
+            
+  
+        </script>
+    </body>
+</html>
+
